@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <title>My Digital Prof</title>
+  </head>
+  <body id="home" style="padding-right: 0; right: 0">
+    <div id="modals">
+      <div
+        class="modal fade"
+        id="bookFreeLessonPopup"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="bookFreeLessonPopup"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content custom-modal">
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-12 text-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="col-2 text-center">
+                        <img src="./images/rocket_1.png" class="img-fluid">
+                    </div>
+                    <div class="col-10">
+                        <h2>Book a <span>free lesson</span></h2>
+                        <h3>
+                            Fill in the form to book a 30-minute lesson with one of our
+                            tutors
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+              <div class="book_free_lesson_form">
+                  <div class="row">
+                      <div class="col-12">
+                          <label for="name" class="form-label">Name</label>
+                          <input type="text" id="name" class="form-control form-height">
+                      </div>
+                      <div class="col-12">
+                          <label for="email" class="form-label">E-mail</label>
+                          <input type="text" id="email" class="form-control form-height">
+                      </div>
+                      <div class="col-12">
+                          <label for="study_level" class="form-label">Study Level</label>
+                          <select name="study_level" id="study_level" class="form-select form-height">
+                              <option selected disabled value="">Select a Study Level</option>
+                              <option value="High School">High School</option>
+                              <option value="College">College</option>
+                              <option value="University">University</option>
+                          </select>
+                      </div>
+                      <div class="col-12">
+                          <label for="subject" class="form-label">Subject</label>
+                          <select name="subject" id="subject" class="form-select form-height">
+                              <option selected disabled value="">Select a Subject</option>
+                              <option value="Physics">Physics</option>
+                              <option value="Chemistry">Chemistry</option>
+                              <option value="Math">Math</option>
+                              <option value="English">English</option>
+                              <option value="Science">Science</option>
+                              <option value="Philosophy">Philosophy</option>
+                          </select>
+                      </div>
+                      <div class="col-12 checkbox_area">
+                          <input type="checkbox" name="privacy_agreement" id="privacy_agreement" class="checkbox_style">
+                          <label for="privacy_agreement" class="agreement">I agree to the treatment of my personal data according to the privacy policy</label>
+                      </div>
+                      <div class="col-12">
+                          <button class="book_free_lesson btn btn-primary btn-lg">Book free lesson</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container px-0 mx-lg-5 mx-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="./images/5.png" class="img-fluid" />
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-bars nav-icon"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-block d-none">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Ripetizioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Corsi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Risorse Gratuite</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a
+                    class="nav-link"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Blog
+                  </a>
+                  <ul
+                    class="dropdown-menu custom-dropdown"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="blog_category.html"
+                        >Blog Category</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="educational_blog.html"
+                        >Educational Blog</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link book_lesson_btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookFreeLessonPopup"
+                  >Book free lesson</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link cart_btn"
+                  href="#"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                >
+                  <img
+                    src="./images/🦆 icon _cart_ (1).png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link profile_btn" href="tutor.html">
+                  <img
+                    src="./images/🦆 icon _user_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link book_lesson_btn"
+                  style="background: none; color: white"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginPopup"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="small_nav d-lg-none" id="mobileNavbar">
+        <button class="close_sm_nav">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="container mx-0 pt-4 px-0">
+          <ul class="navbar-nav me-3 ms-3 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Ripetizioni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Corsi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Risorse Gratuite</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="nav-link"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                
+                <ul
+                  class="dropdown-menu custom-dropdown"
+                  aria-labelledby="dropdownMenuButton"
+                  style="margin-top: 5px;"
+                >
+                  <li>
+                    <a class="dropdown-item" href="blog_category.html">Blog Category</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="educational_blog.html">Educational Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            
+            <li class="nav-item">
+              <a
+                class="nav-link book_free_lesson_sm_btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginPopup"
+                data-bs-backdrop="static"
+              >
+                Login
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link book_free_lesson_sm_btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#bookFreeLessonPopup"
+                >Book free lesson</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart_btn" href="#">
+                <img
+                  src="./images/🦆 icon _cart_ (1).png"
+                  class="img-fluid"
+                  alt=""
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link profile_btn" href="tutor.html">
+                <img
+                  src="./images/🦆 icon _user_.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Offcanvas Navbar -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Navbar content here -->
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <h1 class="text-center">Side bar content</h1>
+          </ul>
+        </div>
+      </div>
+
+      <div id="modals" class="modal-login">
+        <div
+          class="modal fade"
+          id="loginPopup"
+          tabindex="-1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          aria-labelledby="loginPopupLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="row">
+                  <div class="col-12 text-end">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="col-2 text-center">
+                    <h2>Login</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="book_free_lesson_form">
+                  <div class="row">
+                    <div class="col-md-12 mt-3">
+                      <label for="" class="font-18">E-mail</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <label for="" class="font-18">Password</label>
+                      <input type="password" class="form-control" />
+                    </div>
+                    <div class="col-12 checkbox_area mt-3">
+                      <input type="checkbox" name="" id="id" class="checkbox_style" />
+                      <label for="id" class="agreement">
+                        I agree to the treatment of my personal data according
+                        to the privacy policy
+                      </label>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="custom-buttom btn btn-primary mt-3 mb-3">
+                        Submit
+                      </button>
+                    </div>
+                    <div class="col-md-12 register-md">
+                      <button
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginPopup1"
+                        class="btn register-btn"
+                        data-bs-dismiss="modal"
+                      >
+                        Register here
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 2:  -->
+        <div
+          class="modal fade"
+          id="loginPopup1"
+          tabindex="-1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          aria-labelledby="loginPopup1Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered custom-modal-width">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">
+                  <b>Signup here</b>
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="book_free_lesson_form">
+                  <div class="row">
+                    <div class="col-md-12 mt-3">
+                      <label for="" class="font-18">Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <label for="" class="font-18">E-mail</label>
+                      <input type="email" class="form-control" />
+                    </div>
+                    <div class="col-md-12">
+                      <label for="" class="font-18 mt-3">Password</label>
+                      <input type="password" class="form-control" />
+                    </div>
+                    <div class="col-12 checkbox_area d-flex">
+                      <input type="checkbox" name="" id="id" class="checkbox-signup"/>
+                      <label for="id" class="agreement">
+                        I agree to the treatment of my personal data according
+                        to the privacy policy
+                      </label>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="custom-buttom btn btn-primary mt-3 mb-3">
+                        Submit
+                      </button>
+                    </div>
+                    
+                    
+                  </div>
+                </div>
+              </div>
+              
+              <div class="modal-footer">
+                <button
+                  class="btn modal-footer-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginPopup"
+                  data-bs-dismiss="modal"
+                >
+                  Already have an account? Login here
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="home">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="header_left_main_area">
+              <h1 class="hero-heading">
+                Ottieni il meglio dalla tua
+                <br class="d-lg-block d-md-none line_h1" />
+                carriera scolastica e
+                <br class="d-lg-block d-md-none line_h1" />
+                universitaria
+              </h1>
+              <h2 class="hero-text">
+                <div class="text-container">
+                  Affidati ai migliori tutor della<br
+                    class="d-lg-block d-md-none line_break"
+                  />
+                  <span class="nostra-text">nostra</span>
+                  <span class="community-text">community</span>
+                </div>
+              </h2>
+
+              <button class="start_here_btn"><b>Start here</b></button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-6 col-12">
+            <div class="header_right_main_area">
+              <img
+                src="./images/header_sec_vector.png"
+                class="img-fluid hero-img"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="allSubjects">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-5 mx-auto d-flex flex-column align-items-center mb-5"
+            >
+              <div class="stars">
+                <div class="all_stars">
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div class="rating_no">
+                  <h3>4.8</h3>
+                </div>
+              </div>
+              <h3>Trustpilot score</h3>
+            </div>
+            <h1 class="mb-5">
+              <b>
+                Ecco <span>in quali materie</span> possiamo aiutarti
+                <br class="d-lg-block d-none" />
+                (subjects)</b
+              >
+            </h1>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Matematica</h2>
+                <h4 class="study_level">
+                  Scuola superiore <br />
+                  e università
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Fisica</h2>
+                <h4 class="study_level">
+                  Scuola superiore <br />
+                  e università
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Chimica</h2>
+                <h4 class="study_level">
+                  Scuola superiore <br />
+                  e università
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Informatica</h2>
+                <h4 class="study_level">
+                  Scuola superiore <br />
+                  e università
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Analisi 1</h2>
+                <h4 class="study_level">
+                  Università e <br />
+                  Facoltà di Ingegneria
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Fisica 1</h2>
+                <h4 class="study_level">
+                  Università e <br />
+                  Facoltà di Ingegneria
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Analisi 2</h2>
+                <h4 class="study_level">
+                  Università e <br />
+                  Facoltà di Ingegneria
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Fisica 2</h2>
+                <h4 class="study_level">
+                  Università e <br />
+                  Facoltà di Ingegneria
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6">
+              <div class="subject_box">
+                <h2 class="subject_name">Geometria</h2>
+                <h4 class="study_level">
+                  Scuola superiore e <br />
+                  Facoltà di Ingegneria
+                </h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-6 keep_none">
+              <div class="subject_box">
+                <h2 class="subject_name">Economia</h2>
+                <h4 class="study_level">
+                  Scuola superiore <br />
+                  eUniversità
+                </h4>
+              </div>
+            </div>
+            <div class="col-12 d-md-none"></div>
+            <div
+              class="col-lg-4 col-md-4 col-6 mx-auto text-center py-3 px-md-4"
+            >
+              <a
+                href="#onlineprivateLessons"
+                class="all_subjects_sec_bottom_btn btn_all_subject d-block mx-auto"
+                >La soluzione per te</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="onlineprivateLessons">
+        <div class="container">
+          <h1>
+            Ecco <span>come</span> possiamo aiutarti
+            <div class="remove">(Services)</div>
+          </h1>
+          <h3>Scegli la soluzione che fa per te</h3>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="online_lessons_left_side">
+                <h2 class="mb-5">Online private lessons</h2>
+
+                <h3 class="d-flex align-items-center mb-3">
+                  <img
+                    src="./images/Online private lessons.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span class="ml-3 best-tutor"
+                    >Find the best tutor for you</span
+                  >
+                </h3>
+                <h3 class="mb-3">
+                  <img
+                    src="./images/book_session.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <span class="book-session">Book a session</span>
+                </h3>
+                <h3 class="d-flex align-items-center mb-3">
+                  <img src="./images/rocket.png" class="img-fluid" alt="" />
+                  <span class="ml-3 rocket"
+                    >Contatta il tutor e inizia subito le tue lezioni</span
+                  >
+                </h3>
+
+                <h3 class="mb-3">
+                  <img
+                    src="./images/icon _more horiz_circled_outline_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <a href="" class="more-details">More details</a>
+                </h3>
+                <a href="./find_tutor.html" class="find_tutor">Find a tutor</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="online_lessons_right_side">
+                <!-- Empty div to create space -->
+                <div class="spacer"></div>
+
+                <img
+                  src="./images/444.png"
+                  class="img-fluid subject_image"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="telegramCommunity">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="telegram_community_left_side">
+                <h2>Free Telegram Community</h2>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon_multi_bubble.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>
+                    Il luogo ideale per fare <span> domande illimitate</span> ai
+                    nostri tutor
+                  </h3>
+                </div>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon _telegram.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>Accedi con un click al gruppo Telegram</h3>
+                </div>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon_group_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>
+                    Interagisci con la community e
+                    <span> risolvi ogni tuoi dubbio</span> chiedendo a tutor
+                    esperti
+                  </h3>
+                </div>
+                <a href="community.html" class="find_tutor">Find out More</a>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <div class="telegram_community_right_side">
+                <img src="./images/555.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="courses" class="mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="courses_left_side">
+                <h2>Courses</h2>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon_open_select_hand_gesture_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>Seleziona il corso di tuo interesse</h3>
+                </div>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon_media_video.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>
+                    Accedi all'anteprima del corso con la
+                    <span> prima lezione gratuita</span>
+                  </h3>
+                </div>
+                <div class="d-flex">
+                  <img
+                    src="./images/icon_mouse_button_left_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <h3>
+                    Acquista in pochi click e accedi subito a tutte le lezioni
+                    del corso
+                  </h3>
+                </div>
+                <a href="all_courses.html" class="find_tutor"
+                  >See all courses</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="courses_right_side">
+                <img src="./images/22.png" class="img-fluid" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="select-tutor">
+        <div class="container ml-5">
+          <h1 class="text-center mt-5 tutor-text">
+            <b>How to select a tutor</b>
+          </h1>
+          <h2 class="text-center tutor-text">
+            Trova il tutor ideale in pochi click
+          </h2>
+
+          <div class="row mt-5 mb-5 margin40">
+            <div
+              class="col-md-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <span class="num1 text-white rounded-circle d-flex"> 1 </span>
+                <h3 class="mt-3 ml-3 left-text">
+                  Seleziona il livello e la materia di tuo interesse
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-7" mt-5 mb-5>
+              <img
+                class="img-fluid section6_1"
+                src="images/image1_6.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row mt-5 margin40">
+            <div
+              class="col-md-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <span class="num1 text-white rounded-circle d-flex"> 2 </span>
+                <h3 class="mt-3 ml-3 left-text">
+                  Scegli il tutor che preferisci consultando caratteristiche e
+                  recensioni oppure contattandolo direttamente via chat
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-7" mt-5 mb-5>
+              <img
+                class="img-fluid section6_1"
+                src="images/image2_6.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row mt-5 margin40">
+            <div
+              class="col-md-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <span class="num1 text-white rounded-circle d-flex"> 3 </span>
+                <h3 class="mt-3 ml-3 left-text">
+                  Inserisci la durata della sessione con il tutor scelto
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-7 mt-5 mb-5mt-5">
+              <img
+                class="img-fluid section6_1"
+                src="images/image3_6.png"
+                alt=""
+              />
+              <div class="d-flex justify-content-end mt-5 mb-5">
+                <button class="custom-button text-white rounded-btn">
+                  Book Session
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 margin40">
+            <div
+              class="col-md-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <span class="num1 text-white rounded-circle d-flex"> 4 </span>
+                <h3 class="mt-3 ml-3 left-text">
+                  Paga in maniera intuitiva, veloce e sicura con carta di
+                  credito oppure Paypal
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-7 mt-5 mb-5">
+              <img
+                class="img-fluid section6_1"
+                src="images/image4_6.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row mt-5 margin40">
+            <div
+              class="col-md-5 d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex align-items-center">
+                <span class="num1 text-white rounded-circle d-flex"> 5 </span>
+                <h3 class="mt-3 ml-3 left-text">
+                  Contatta il tutor per organizzare la prima lezione!
+                </h3>
+              </div>
+            </div>
+            <div class="col-md-7" mt-5 mb-5>
+              <img
+                class="img-fluid section6_1"
+                src="images/image5_6.png"
+                alt=""
+              />
+              <div class="d-flex justify-content-start mt-3 mb-3">
+                <button class="custom-button text-white rounded-btn">
+                  Chat with Tutor
+                </button>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3 mb-3">
+              <button class="custom-button1 text-white">Find a Tutor</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="container">
+          <h1>Domande più frequenti (FAQ)</h1>
+          <div class="row">
+            <div class="col-12">
+              <div class="faq_area">
+                <button
+                  class="btn faq_btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#multiCollapseExample1"
+                  aria-expanded="false"
+                  aria-controls="multiCollapseExample1"
+                >
+                  <span class="text">
+                    Come posso scegliere un tutor per le ripetizioni?
+                  </span>
+                  <span class="icon plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-plus"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon minus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="col-12">
+                  <div
+                    class="collapse multi-collapse"
+                    id="multiCollapseExample1"
+                  >
+                    <div class="faq_card_area">
+                      <h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Tenetur illo quibusdam minima, eveniet voluptates
+                        ab dignissimos ipsum repudiandae reiciendis maxime
+                        ducimus, eos aut facere autem voluptate similique magnam
+                        dolorum beatae?
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn faq_btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#multiCollapseExample2"
+                  aria-expanded="false"
+                  aria-controls="multiCollapseExample2"
+                >
+                  <span class="text">
+                    Che metodi di pagamento posso usare?
+                  </span>
+                  <span class="icon plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-plus"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon minus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="col-12">
+                  <div
+                    class="collapse multi-collapse"
+                    id="multiCollapseExample2"
+                  >
+                    <div class="faq_card_area">
+                      <h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Tenetur illo quibusdam minima, eveniet voluptates
+                        ab dignissimos ipsum repudiandae reiciendis maxime
+                        ducimus, eos aut facere autem voluptate similique magnam
+                        dolorum beatae?
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn faq_btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#multiCollapseExample3"
+                  aria-expanded="false"
+                  aria-controls="multiCollapseExample3"
+                >
+                  <span class="text">
+                    Posso contattare il tutor prima di acquistare?
+                  </span>
+                  <span class="icon plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-plus"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon minus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="col-12">
+                  <div
+                    class="collapse multi-collapse"
+                    id="multiCollapseExample3"
+                  >
+                    <div class="faq_card_area">
+                      <h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Tenetur illo quibusdam minima, eveniet voluptates
+                        ab dignissimos ipsum repudiandae reiciendis maxime
+                        ducimus, eos aut facere autem voluptate similique magnam
+                        dolorum beatae?
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn faq_btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#multiCollapseExample4"
+                  aria-expanded="false"
+                  aria-controls="multiCollapseExample4"
+                >
+                  <span class="text">
+                    Quali sono le tariffe delle ripetizioni?
+                  </span>
+                  <span class="icon plus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-plus"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="icon minus">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-dash"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="col-12">
+                  <div
+                    class="collapse multi-collapse"
+                    id="multiCollapseExample4"
+                  >
+                    <div class="faq_card_area">
+                      <h4>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Tenetur illo quibusdam minima, eveniet voluptates
+                        ab dignissimos ipsum repudiandae reiciendis maxime
+                        ducimus, eos aut facere autem voluptate similique magnam
+                        dolorum beatae?
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="collapse multi-collapse" id="faqShowMoreCollapse">
+                    <!--Inner faqs starting from there-->
+                    <button
+                      class="btn faq_btn collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqShowMoreCollapseInner1"
+                      aria-expanded="false"
+                      aria-controls="faqShowMoreCollapseInner1"
+                    >
+                      <span class="text">
+                        Come posso scegliere un tutor per le ripetizioni?
+                      </span>
+                      <span class="icon plus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="bi bi-plus"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="icon minus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-dash"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="col-12">
+                      <div
+                        class="collapse multi-collapse"
+                        id="faqShowMoreCollapseInner1"
+                      >
+                        <div class="faq_card_area">
+                          <h4>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur illo quibusdam minima, eveniet
+                            voluptates ab dignissimos ipsum repudiandae
+                            reiciendis maxime ducimus, eos aut facere autem
+                            voluptate similique magnam dolorum beatae?
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn faq_btn collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqShowMoreCollapseInner2"
+                      aria-expanded="false"
+                      aria-controls="faqShowMoreCollapseInner2"
+                    >
+                      <span class="text">
+                        Che metodi di pagamento posso usare?
+                      </span>
+                      <span class="icon plus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="bi bi-plus"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="icon minus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-dash"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="col-12">
+                      <div
+                        class="collapse multi-collapse"
+                        id="faqShowMoreCollapseInner2"
+                      >
+                        <div class="faq_card_area">
+                          <h4>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur illo quibusdam minima, eveniet
+                            voluptates ab dignissimos ipsum repudiandae
+                            reiciendis maxime ducimus, eos aut facere autem
+                            voluptate similique magnam dolorum beatae?
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn faq_btn collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqShowMoreCollapseInner3"
+                      aria-expanded="false"
+                      aria-controls="faqShowMoreCollapseInner3"
+                    >
+                      <span class="text">
+                        Posso contattare il tutor prima di acquistare?
+                      </span>
+                      <span class="icon plus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="bi bi-plus"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="icon minus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-dash"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="col-12">
+                      <div
+                        class="collapse multi-collapse"
+                        id="faqShowMoreCollapseInner3"
+                      >
+                        <div class="faq_card_area">
+                          <h4>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur illo quibusdam minima, eveniet
+                            voluptates ab dignissimos ipsum repudiandae
+                            reiciendis maxime ducimus, eos aut facere autem
+                            voluptate similique magnam dolorum beatae?
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      class="btn faq_btn collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faqShowMoreCollapseInner4"
+                      aria-expanded="false"
+                      aria-controls="faqShowMoreCollapseInner4"
+                    >
+                      <span class="text">
+                        Quali sono le tariffe delle ripetizioni?
+                      </span>
+                      <span class="icon plus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="currentColor"
+                          class="bi bi-plus"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="icon minus">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-dash"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+                    <div class="col-12">
+                      <div
+                        class="collapse multi-collapse"
+                        id="faqShowMoreCollapseInner4"
+                      >
+                        <div class="faq_card_area">
+                          <h4>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Tenetur illo quibusdam minima, eveniet
+                            voluptates ab dignissimos ipsum repudiandae
+                            reiciendis maxime ducimus, eos aut facere autem
+                            voluptate similique magnam dolorum beatae?
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  class="btn faq_btn_show_more collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqShowMoreCollapse"
+                  aria-expanded="false"
+                  aria-controls="faqShowMoreCollapse"
+                >
+                  <span class="text1"> Show more faq </span>
+                  <span class="text2"> Show less faq </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial">
+        <div class="container">
+          <h1>Testimonials</h1>
+          <div
+            class="owl-carousel testimonial_landing_page_carousel owl-theme text-center"
+          >
+            <div class="item testimonial_single_item">
+              <div class="testimonial_single_item_img">
+                <img src="./images/team-1.jpg" class="img-fluid" />
+              </div>
+              <div class="testimonial_single_item_name">
+                <h3>Anna Deynah</h3>
+              </div>
+              <div class="testimonial_single_item_work">
+                <h4>UX Designer</h4>
+              </div>
+              <div class="testimonial_single_item_review">
+                <h6>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  sunt assumenda vero excepturi maiores, esse, neque
+                  voluptatibus voluptatum aperiam illum, eligendi delectus
+                  nesciunt doloremque quae laboriosam inventore perspiciatis
+                  accusamus reprehenderit?
+                </h6>
+              </div>
+              <div class="testimonial_single_item_rating">
+                <div class="review">
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item testimonial_single_item">
+              <div class="testimonial_single_item_img">
+                <img src="./images/team-2.jpg" class="img-fluid" />
+              </div>
+              <div class="testimonial_single_item_name">
+                <h3>Anna Deynah</h3>
+              </div>
+              <div class="testimonial_single_item_work">
+                <h4>UX Designer</h4>
+              </div>
+              <div class="testimonial_single_item_review">
+                <h6>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  sunt assumenda vero excepturi maiores, esse, neque
+                  voluptatibus voluptatum aperiam illum, eligendi delectus
+                  nesciunt doloremque quae laboriosam inventore perspiciatis
+                  accusamus reprehenderit?
+                </h6>
+              </div>
+              <div class="testimonial_single_item_rating">
+                <div class="review">
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item testimonial_single_item">
+              <div class="testimonial_single_item_img">
+                <img src="./images/team-3.jpg" class="img-fluid" />
+              </div>
+              <div class="testimonial_single_item_name">
+                <h3>Anna Deynah</h3>
+              </div>
+              <div class="testimonial_single_item_work">
+                <h4>UX Designer</h4>
+              </div>
+              <div class="testimonial_single_item_review">
+                <h6>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  sunt assumenda vero excepturi maiores, esse, neque
+                  voluptatibus voluptatum aperiam illum, eligendi delectus
+                  nesciunt doloremque quae laboriosam inventore perspiciatis
+                  accusamus reprehenderit?
+                </h6>
+              </div>
+              <div class="testimonial_single_item_rating">
+                <div class="review">
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item testimonial_single_item">
+              <div class="testimonial_single_item_img">
+                <img src="./images/team-4.jpg" class="img-fluid" />
+              </div>
+              <div class="testimonial_single_item_name">
+                <h3>Anna Deynah</h3>
+              </div>
+              <div class="testimonial_single_item_work">
+                <h4>UX Designer</h4>
+              </div>
+              <div class="testimonial_single_item_review">
+                <h6>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+                  sunt assumenda vero excepturi maiores, esse, neque
+                  voluptatibus voluptatum aperiam illum, eligendi delectus
+                  nesciunt doloremque quae laboriosam inventore perspiciatis
+                  accusamus reprehenderit?
+                </h6>
+              </div>
+              <div class="testimonial_single_item_rating">
+                <div class="review">
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="single_star">
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="container">
+          <h1>Contact us</h1>
+          <form action="">
+            <div class="row">
+              <div class="col-6">
+                <label for="">Enter Name</label>
+                <input type="text" name="name" id="" />
+              </div>
+              <div class="col-6">
+                <label for="">I am</label>
+                <select name="gender" id="">
+                  <option value="">Click to select</option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label for="">Email Address</label>
+                <input type="email" name="email" id="" />
+              </div>
+              <div class="col-6">
+                <label for="">Password</label>
+                <input type="password" name="password" id="" />
+              </div>
+              <div class="col-6">
+                <label for="">Country</label>
+                <input type="text" name="country" id="" />
+              </div>
+              <div class="col-6">
+                <label for="">Phone Number</label>
+                <input type="number" name="phone" id="" />
+              </div>
+              <div class="col-12">
+                <label for="">Message</label>
+                <textarea name="message" id="" rows="7"></textarea>
+              </div>
+              <div class="col-md-8 col-11">
+                <input type="checkbox" name="" id="termsCondition" />
+                <label for="termsCondition"
+                  >l accept the Terms and Conditions</label
+                >
+              </div>
+              <div class="col-12 text-end">
+                <button>Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./owl.carousel.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      $(".book_lesson_btn").click(function () {
+        $("body").css("paddingRight", "0px");
+      });
+    </script>
+  </body>
+</html>

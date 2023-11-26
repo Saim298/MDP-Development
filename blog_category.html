@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <title>My Digital Prof</title>
+  </head>
+
+  <body id="blog_category" style="padding-right: 0; right: 0">
+    <div id="modals">
+      <div
+        class="modal fade"
+        id="bookFreeLessonPopup"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="bookFreeLessonPopup"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="row">
+                <div class="col-12 text-end">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="col-2 text-center">
+                  <img src="./images/rocket_1.png" class="img-fluid" />
+                </div>
+                <div class="col-10">
+                  <h2>Book a <span>free lesson</span></h2>
+                  <h3>
+                    Fill in the form to book a 30-minute lesson with one of our
+                    tutors
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="book_free_lesson_form">
+                <div class="row">
+                  <div class="col-md-6 col-12">
+                    <label for="">Name</label>
+                    <input type="text" />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="">E-mail</label>
+                    <input type="text" />
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="">Study Level</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <label for="">Subject</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">Physics</option>
+                      <option value="">Chemistry</option>
+                      <option value="">Math</option>
+                      <option value="">English</option>
+                      <option value="">Science</option>
+                      <option value="">Pholosphy</option>
+                    </select>
+                  </div>
+                  <div class="col-12 checkbox_area">
+                    <input type="checkbox" name="" id="id" />
+                    <label for="id"
+                      >I agree to the treatment of my personal data according to
+                      the privacy policy</label
+                    >
+                  </div>
+                  <div class="col-md-5">
+                    <button class="book_free_lesson">Book free lesson</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container px-0 mx-lg-5 mx-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="./images/5.png" class="img-fluid" />
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse d-lg-block d-none">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Ripetizioni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Corsi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Risorse Gratuite</a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a
+                    class="nav-link"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Blog
+                  </a>
+                  <ul
+                    class="dropdown-menu custom-dropdown"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="blog_category.html"
+                        >Blog Category</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="educational_blog.html"
+                        >Educational Blog</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link book_lesson_btn"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#bookFreeLessonPopup"
+                  >Book free lesson</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link cart_btn"
+                  href="#"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                >
+                  <img
+                    src="./images/🦆 icon _cart_ (1).png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link profile_btn" href="tutor.html">
+                  <img
+                    src="./images/🦆 icon _user_.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link book_lesson_btn"
+                  style="
+                    background-color: transparent;
+                    color: white;
+                    cursor: pointer;
+                  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginPopup"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="small_nav d-lg-none" id="mobileNavbar">
+        <button class="close_sm_nav">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="container mx-0 pt-4 px-0">
+          <ul class="navbar-nav me-3 ms-3 mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Ripetizioni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Corsi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Risorse Gratuite</a>
+            </li>
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="nav-link"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item" href="blog_category.html"
+                      >Blog Category</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="educational_blog.html"
+                      >Educational Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link book_free_lesson_sm_btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#loginPopup"
+                data-bs-backdrop="static"
+              >
+                Login
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link book_free_lesson_sm_btn"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#bookFreeLessonPopup"
+                >Book free lesson</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart_btn" href="#">
+                <img
+                  src="./images/🦆 icon _cart_ (1).png"
+                  class="img-fluid"
+                  alt=""
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasNavbar"
+                />
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link profile_btn" href="tutor.html">
+                <img
+                  src="./images/🦆 icon _user_.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="modals" style="z-index: 99">
+        <div
+          class="modal fade"
+          id="loginPopup"
+          tabindex="-1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          aria-labelledby="loginPopupLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="row">
+                  <div class="col-12 text-end">
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="col-2 text-center">
+                    <h2>Login</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="book_free_lesson_form">
+                  <div class="row">
+                    <div class="col-md-12 mt-3">
+                      <label for="" style="font-size: 18px">E-mail</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-12">
+                      <label for="" style="font-size: 18px">Password</label>
+                      <input type="password" class="form-control" />
+                    </div>
+                    <div class="col-12 checkbox_area">
+                      <input type="checkbox" name="" id="id" />
+                      <label for="id">
+                        I agree to the treatment of my personal data according
+                        to the privacy policy
+                      </label>
+                    </div>
+                    <div class="col-md-12">
+                      <button class="custom-buttom btn btn-primary mt-3 mb-3">
+                        Submit
+                      </button>
+                    </div>
+                    <div class="col-md-12" style="align-items: center">
+                      <button
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginPopup1"
+                        class="btn"
+                        data-bs-dismiss="modal"
+                        style="font-size: 22px; margin-left: 201px"
+                      >
+                        Register here
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal 2: Book Free Lesson -->
+        <div
+          class="modal fade"
+          id="loginPopup1"
+          tabindex="-1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          aria-labelledby="loginPopup1Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="padding: 0 40px">
+              <div class="modal-header">
+                <h5 class="modal-title" style="font-size: 22px">
+                  <b>Signup here</b>
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="book_free_lesson_form">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <label for="" style="font-size: 18px">Name</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <label for="" style="font-size: 18px">E-mail</label>
+                      <input type="text" class="form-control" />
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <label for="" style="font-size: 18px">Password</label>
+                      <input type="password" class="form-control" />
+                    </div>
+                    <div class="col-12 checkbox_area" style="margin: 10px 0">
+                      <input type="checkbox" name="" id="id" />
+                      <label for="id">
+                        I agree to the treatment of my personal data according
+                        to the privacy policy
+                      </label>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <button class="custom-buttom btn btn-primary mt-3 mb-3">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginPopup"
+                  data-bs-dismiss="modal"
+                  style="font-size: 22px"
+                >
+                  Already have an account? Login here
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offcanvas Navbar -->
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <!-- Navbar content here -->
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <h1 class="text-center">Side bar content</h1>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container">
+          <div class="row row1">
+            <div class="col col-12 col-md-12">
+              <div class="wrapper">
+                <h2>Blog Category (Info)</h2>
+                <h3>Find out all the blog posts in this category</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row row2">
+            <div class="col-md-8 col-12 col">
+              <a href="blog_detail.html">
+                <div class="wrapper my-4">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="img">
+                        <img src="./images/22.png" class="img-fluid" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="content">
+                        <h3>Porche Wordpress E Lento? Scopriamolo!</h3>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Quaerat, doloremque in itaque quos facilis
+                          minima nemo non? Fuga?
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="fa-regular fa-clock"></i>
+                          <span>2 Minutes read</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="blog_detail.html">
+                <div class="wrapper my-4">
+                  <div class="row">
+                    <div class="col-md-6 col-12">
+                      <div class="img">
+                        <img src="./images/2.png" class="img-fluid" alt="" />
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                      <div class="content">
+                        <h3>Porche Wordpress E Lento? Scopriamolo!</h3>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing
+                          elit. Quaerat, doloremque in itaque quos facilis
+                          minima nemo non? Fuga?
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                          <i class="fa-regular fa-clock"></i>
+                          <span>2 Minutes read</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col d-lg-block d-md-none"></div>
+            <div class="col-lg-3 col-md-4 col-12 mt-5">
+              <div class="banner_img">
+                <img
+                  src="./images/side-banner-desktop-ripetizioni-4 1.png"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./owl.carousel.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      // $(document).ready(function(){
+      //   $('#bookFreeLessonPopup').modal('show');
+      // })
+    </script>
+  </body>
+</html>

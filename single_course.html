@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./owl.carousel.min.css">
+  <link rel="stylesheet" href="./owl.theme.default.css">
+  <title>My Digital Prof</title>
+</head>
+<style>
+  body header {
+    background-color: transparent !important;
+  }
+  #findTutorPg header nav.bg{
+    box-shadow: none;
+    position: relative;
+  }
+</style>
+
+<body id="singleCoursePg">
+  <div id="modals" >
+    <div class="modal fade" id="requestSessionPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookFreeLessonPopup" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row">
+              <div class="col-12 text-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                
+              </div>
+              <div class="col-12">
+                <h2>Request your session</h2>
+                <h3>Inserisci le ultime informazioni e prenota una
+                  sessione con il tutor scelto</h3>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="book_free_lesson_form">
+              <div class="row">
+                <div class="col-md-6 col-12 left_side">
+                  <div id="img_div">
+                    <img src="./images/salvatore-failla-MDP-home 1.png" class="img-fluid" alt="">
+                    <h3>Salvatore</h3>
+                  </div>
+                  <div class="reviews">
+                    <div><img src="./images/medal 1.png" class="img-fluid medal" alt=""><span>King tutor</span></div>
+                    <div><img src="./images/star 1.png" class="img-fluid star" alt=""><span>4.9/5 Reviews</span></div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-12 right_col">
+                  <div class="right-side">
+                    <label for="">Study level</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <div class="right-side">
+                    <label for="">Subject</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <div class="right-side">
+                    <label for="">Session duration</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <button class="request_session">Request session</button>
+                </div>
+
+                <!-- <div class="col-md-6 col-12">
+                  <label for="">Name</label>
+                  <input type="text">
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">E-mail</label>
+                  <input type="text">
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">Study Level</label>
+                  <select name="" id="">
+                    <option selected disabled></option>
+                    <option value="">High School</option>
+                    <option value="">College</option>
+                    <option value="">University</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">Subject</label>
+                  <select name="" id="">
+                    <option selected disabled></option>
+                    <option value="">Physics</option>
+                    <option value="">Chemistry</option>
+                    <option value="">Math</option>
+                    <option value="">English</option>
+                    <option value="">Science</option>
+                    <option value="">Pholosphy</option>
+                  </select>
+                </div>
+                <div class="col-12 checkbox_area">
+                  <input type="checkbox" name="" id="id">
+                  <label for="id">I agree to the treatment of my personal data according to the privacy policy</label>
+                </div>
+                <div class="col-md-5">
+                  <button class="book_free_lesson">
+                    Book free lesson
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container px-0 mx-lg-5 mx-3">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/5.png" class="img-fluid">
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="main-wrapper">
+        <div class="container">
+            <div class="row row-main">
+                <div class="col col1 col-12 col-md-12" >
+                    <div class="video">
+                      <video src="videos/pexels-peggy-anke-5994360 (1080p).mp4" autoplay controls ></video>
+                    </div>
+                </div>
+                <div class="hamburger" id="hamburger">
+                  <i class="fa-solid fa-bars" style="color: #ffffff; background-color: black;" onclick="playlist_toggle()"></i>
+                </div>
+                <div class="row-child" id="playlist">
+                  <div class="col col-12 col-sm-12 col-md-5 col-lg-4"  style="background-color: black;">
+                      <!-- <div class="top">
+                          <h4><span>14 lezioni</span> 3 ore minuti</h4>
+                          <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                      </div> -->
+                      <div class="top">
+                          <h4><span>Playlist</span></h4>
+                          <!-- <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i> -->
+                      </div>
+                      <div class="main">
+                          <div class="list active">
+                              <div>
+                                  <i class="fa-solid fa-check"></i>
+                                  <span>1</span>
+                                  <video src="videos/production_id_3692634 (1080p).mp4" style="width: 100px;"></video>
+                                  <h3>Claro que SEO!</h3>
+                              </div>
+                              <h5>1:22</h5>
+                          </div>
+                          <div class="list">
+                              <div>
+                                  <i class="fa-solid fa-check"></i>
+                                  <span>1</span>
+                                  <video src="videos/pexels-peggy-anke-5994360 (1080p).mp4" style="width: 100px;"></video>
+                                  <h3>Claro que SEO!</h3>
+                              </div>
+                              <h5>1:22</h5>
+                          </div>
+                          
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="col col1 col-12 col-md-12 col-lg-8">
+                  <div class="header_second_area">
+                    <div class="tab">
+                      <div class="row">
+                        <div class="col text-center">
+                          <button class="tablinks" onclick="openCity(event, 'description')">Description</button>
+                        </div>
+                        <div class="col text-center">
+                          <button class="tablinks" onclick="openCity(event, 'resources')">Resources</button>
+                        </div>
+                        <div class="col text-center">
+                          <button class="tablinks" onclick="openCity(event, 'reviews')">Reviews</button>
+                        </div>
+                        <div class="col text-center">
+                          <button class="tablinks" onclick="openCity(event, 'comments')">Comments</button>
+                        </div>
+                      </div>
+    
+                      <div id="description" class="tabcontent">
+                      <h3><b>Description</b></h3>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel exercitationem cum aliquam mollitia alias architecto rerum accusamus, amet et, autem, est provident maiores quis explicabo a? Iusto labore harum eum qui rerum nihil amet! Ullam vitae aliquid ea tempore repellendus iste, aut voluptate dolore ducimus, enim quae libero nostrum atque!</p>
+                      </div>
+                    
+                      <div id="resources" class="tabcontent">
+                        <h3><b>Resources</b></h3>
+                        <p>
+                          <a href="">Extra PDF's</a>
+                          <a href="">Useful Links</a>
+                        </p> 
+                      </div>
+                    
+                      <div id="reviews" class="tabcontent">
+                        <h3><b>Reviews</b></h3>
+                        <div class="reviews-wrapper">
+                          <div class="ratings-wrapper">
+                            <div class="top-left">
+                              <span class="total-rating">5</span>
+                              <div class="icons">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <span class="total-reviews">52 reviews</span>
+                            </div>
+                            <div class="top-right">
+                              <div class="wrapper">
+                                <div class="five-stars">
+                                  <div class="one">5 stars</div>
+                                  <div class="two"></div>
+                                  <div class="three">(51)</div>
+                                </div>
+                                <div class="five-stars">
+                                  <div class="one">4 stars</div>
+                                  <div class="two"></div>
+                                  <div class="three">(0)</div>
+                                </div>
+                                <div class="five-stars">
+                                  <div class="one">3 stars</div>
+                                  <div class="two"></div>
+                                  <div class="three">(0)</div>
+                                </div>
+                                <div class="five-stars">
+                                  <div class="one">2 stars</div>
+                                  <div class="two"></div>
+                                  <div class="three">(0)</div>
+                                </div>
+                                <div class="five-stars">
+                                  <div class="one">1 star</div>
+                                  <div class="two"></div>
+                                  <div class="three">()</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="review-wrapper">
+                            <div class="review">
+                              <img src="./images/444.png" class="img-fluid" alt="">
+                              <div class="main">
+                                <div class="title">
+                                  <div class="name-wrapper">
+                                    <span class="name">Yana</span><i class="fa-solid fa-star"></i><span class="number">5</span>
+                                  </div>
+                                  <div class="date">
+                                    <span>July 28, 2023</span>
+                                  </div>
+                                </div>
+                                <div class="message">
+                                  <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi ratione quod error sit incidunt, laudantium rerum commodi facere ipsum?
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="review">
+                              <img src="./images/444.png" class="img-fluid" alt="">
+                              <div class="main">
+                                <div class="title">
+                                  <div class="name-wrapper">
+                                    <span class="name">Yana</span><i class="fa-solid fa-star"></i><span class="number">5</span>
+                                  </div>
+                                  <div class="date">
+                                    <span>July 28, 2023</span>
+                                  </div>
+                                </div>
+                                <div class="message">
+                                  <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi ratione quod error sit incidunt, laudantium rerum commodi facere ipsum?
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <a href="#" type="button">Show more reviews</a>
+                      </div>
+
+                      <div id="comments" class="tabcontent">
+                        <h3><b>Comments</b></h3>
+                        <div class="comments-wrapper">
+                          <div>
+                            <textarea rows="7"></textarea>
+                          </div>
+                          <button class="">Send</button>
+  
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col col2 col-12 col-md-12  col-lg-4">
+                    <div class="wrapper">
+                        <div class="tutor-profile">
+                            <div class="top">
+                                <img src="./images/salvatore-failla-MDP-home 1.png" class="img-fluid" alt="">
+                                <div>
+                                    <h4><b>Pascal Claro</b></h4>
+                                    <span>CEO di imparaqui</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ducimus iste animi cumque, quae eius rerum laudantium dolores sequi corporis odio, reiciendis voluptatem quam deserunt.</p>
+                                <a type="button" href="">Vai al profilo</a>
+                            </div>
+                        </div>
+                        <a class="book" type="button" data-bs-toggle="modal" data-bs-target="#requestSessionPopup">Book lesson with this tutor</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <script src="./owl.carousel.min.js"></script>
+  <script src="./script.js"></script>
+
+
+
+  <script>
+    const playlist_toggle = ()=>{
+      
+      const playlist_hamburger = document.getElementById('hamburger')
+      const playlist = document.getElementById('playlist')
+      playlist.classList.toggle("playlist")
+    }
+  </script>
+
+
+<!-- Place this script at the end of your HTML, just before the closing </body> tag -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      let listVideo = document.querySelectorAll('.main .list');
+      let mainVideo = document.querySelector('.video video');
+
+      listVideo.forEach(video => {
+          video.addEventListener("click", function() {
+              listVideo.forEach(vid => vid.classList.remove("active"));
+              video.classList.add("active");
+
+              if (video.classList.contains("active")) {
+                  let src = video.querySelector("video").getAttribute("src");
+                  mainVideo.src = src;
+                  mainVideo.play(); // Auto-play the selected video
+              }
+          });
+      });
+  });
+</script>
+
+</body>
+
+</html>

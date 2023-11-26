@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./owl.carousel.min.css">
+  <link rel="stylesheet" href="./owl.theme.default.css">
+  <title>My Digital Prof</title>
+</head>
+<style>
+  body header {
+    background-color: transparent !important;
+  }
+  #findTutorPg header nav.bg{
+    box-shadow: none;
+    position: relative;
+  }
+</style>
+
+<body id="tutorProfilePg">
+  <div id="modals">
+    <div class="modal fade" id="requestSessionPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="bookFreeLessonPopup" aria-hidden="true">
+      <div class="modal-dialog  modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="row">
+              <div class="col-12 text-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                
+              </div>
+              <div class="col-12">
+                <h2>Request your session</h2>
+                <h3>Inserisci le ultime informazioni e prenota una
+                  sessione con il tutor scelto</h3>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="book_free_lesson_form">
+              <div class="row">
+                <div class="col-md-6 col-12 left_side review_flex">
+                  <div class="request_popup_flex">
+                    <div id="img_div">
+                      <img src="./images/salvatore-failla-MDP-home 1.png" class="img-fluid" alt="">
+                      <h3>Salvatore</h3>
+                    </div>
+                    <div class="reviews">
+                      <h3 class="review_text">Salvatore</h3>
+                      <div><img src="./images/medal 1.png" class="img-fluid medal" alt=""><span>King tutor</span></div>
+                      <div><img src="./images/star 1.png" class="img-fluid star" alt=""><span>4.9/5 Reviews</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-12 right_col">
+                  <div class="right-side">
+                    <label for="">Study level</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <div class="right-side">
+                    <label for="">Subject</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <div class="right-side">
+                    <label for="">Session duration</label>
+                    <select name="" id="">
+                      <option selected disabled></option>
+                      <option value="">High School</option>
+                      <option value="">College</option>
+                      <option value="">University</option>
+                    </select>
+                  </div>
+                  <button class="request_session">Request session</button>
+                </div>
+
+                <!-- <div class="col-md-6 col-12">
+                  <label for="">Name</label>
+                  <input type="text">
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">E-mail</label>
+                  <input type="text">
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">Study Level</label>
+                  <select name="" id="">
+                    <option selected disabled></option>
+                    <option value="">High School</option>
+                    <option value="">College</option>
+                    <option value="">University</option>
+                  </select>
+                </div>
+                <div class="col-md-6 col-12">
+                  <label for="">Subject</label>
+                  <select name="" id="">
+                    <option selected disabled></option>
+                    <option value="">Physics</option>
+                    <option value="">Chemistry</option>
+                    <option value="">Math</option>
+                    <option value="">English</option>
+                    <option value="">Science</option>
+                    <option value="">Pholosphy</option>
+                  </select>
+                </div>
+                <div class="col-12 checkbox_area">
+                  <input type="checkbox" name="" id="id">
+                  <label for="id">I agree to the treatment of my personal data according to the privacy policy</label>
+                </div>
+                <div class="col-md-5">
+                  <button class="book_free_lesson">
+                    Book free lesson
+                  </button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container px-0 mx-lg-5 mx-3">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/5.png" class="img-fluid">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button">
+          <span class="navbar-toggler-icon">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-block d-none">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Ripetizioni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Corsi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Risorse Gratuite</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="blog_category.html">Blog</a>
+            </li> -->
+            <li class="nav-item">
+              <div class="dropdown">
+                <a
+                  class="nav-link"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Blog
+                </a>
+                <ul class="dropdown-menu custom-dropdown" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item" href="blog_category.html"
+                      >Blog Category</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="educational_blog.html"
+                      >Educational Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link book_lesson_btn" type="button" data-bs-toggle="modal" data-bs-target="#bookFreeLessonPopup">Book free lesson</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cart_btn" href="#">
+                <img src="./images/🦆 icon _cart_ (1).png" class="img-fluid" alt="">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link profile_btn" href="tutor.html">
+                <img src="./images/🦆 icon _user_.png" class="img-fluid" alt="">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="small_nav d-lg-none">
+      <button class="close_sm_nav">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="container mx-0 pt-4 px-0">
+        <ul class="navbar-nav me-3 ms-3  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Ripetizioni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Corsi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Risorse Gratuite</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link book_free_lesson_sm_btn" type="button" data-bs-toggle="modal" data-bs-target="#bookFreeLessonPopup">Book free lesson</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link cart_btn" href="#">
+              <img src="./images/🦆 icon _cart_ (1).png" class="img-fluid" alt="">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link profile_btn" href="tutor.html">
+              <img src="./images/🦆 icon _user_.png" class="img-fluid" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="firstArea">
+      <div class="container">
+          <h1 class="heading">
+           Tutor profile page
+          </h1>
+          <div class="row">
+            <div class="col-lg-8 col-md-12">
+              <div class="top_header_left_area">
+                <div class="single_tutor">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6
+">
+                      <div class="tutor_profile">
+                        <img src="./images/salvatore-failla-MDP-home 1.png" class="img-fluid">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6
+">
+                      <div class="last_active">
+                        <h4 class="offline">Last active about 3 hours ago</h4>
+                      </div>
+                      <div class="tutor_name">
+                        <h3>
+                          Arif Waqas 
+                          <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </div> 
+                        </h3>
+                      </div>
+                      <div class="tagline">
+                        <h4>Certified English Foreign Language tutor with 8 years of experience</h4>
+                      </div>
+                      <div class="tutor_rating_area d-flex">
+                        <div class="star">
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="tutor_rating">
+                          <h5>5/5 </h5>
+                        </div> 
+                        <div class="tutor_total_review">
+                          <h5>
+                            (17)
+                          </h5>
+                        </div>
+                      </div>
+                      <div class="row d-md-block d-none">
+                        <div class="col-12">
+                          <div class="tutor_subjects">
+                            <div class="row">
+                              <div class="col">
+                                <div class="subject">English</div>
+                              </div>
+                              <div class="col">
+                                <div class="subject">Physics</div>
+                              </div>
+                              <div class="col">
+                                <div class="subject">Chemistry</div>
+                              </div>
+                              <div class="col">
+                                <div class="subject">Biology</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row d-md-none d-block">
+                      <div class="col-12">
+                        <div class="tutor_subjects">
+                          <div class="row">
+                            <div class="col">
+                              <div class="subject">English</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Physics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Chemistry</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Biology</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="super_tutor_badge">
+                        <div class="row">
+                          <div class="col-lg-1 col-md-1 col-2">
+                            <div class="light_badge">
+                              <img src="./images/logo.png" class="img-fluid" alt="">
+                            </div>
+                          </div>
+                          <div class="col-md-11 col-10">
+                            <div class="text">
+                              <h5>Super tutor</h5>
+                              <h6>A highly rated and experienced tutor. <a href="#">Learn more</a></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="top_header_right_area">
+                <div class="tutor_video">
+                  <video src="./videos/video.mp4" controls=""></video>
+                </div>
+                <div class="tutor_credentials d-lg-flex d-none">
+                  <a class="request_session_btn" type="button" data-bs-toggle="modal" data-bs-target="#requestSessionPopup">
+                    Request session
+                  </a>
+                  <button class="send_message_btn">
+                    Send a message
+                  </button>
+                  <button class="book_free_lesson_btn" type="button" data-bs-toggle="modal" data-bs-target="#bookFreeLessonPopup">
+                    Book free lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 d-md-block d-lg-none">
+              <div class="top_header_right_area">
+                <div class="tutor_credentials">
+                  <a class="request_session_btn" type="button" data-bs-toggle="modal" data-bs-target="#requestSessionPopup">
+                    Request session
+                  </a>
+                  <button class="send_message_btn">
+                    Send a message
+                  </button>
+                  <button class="book_free_lesson_btn book_free_lesson_sm_btn" type="button" data-bs-toggle="modal" data-bs-target="#bookFreeLessonPopup">
+                    Book free lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-12">
+              <div class="header_second_area">
+                <div class="tab">
+                  <div class="row">
+                    <div class="col text-center px-0">
+                      <button class="tablinks active" onclick="openCity(event, 'description')">Description</button>
+                    </div>
+                    <div class="col text-center px-0">
+                      <button class="tablinks" onclick="openCity(event, 'subjects')">Subjects</button>
+                    </div>
+                    <div class="col text-center px-0">
+                      <button class="tablinks" onclick="openCity(event, 'reviews')">Reviews</button>
+                    </div>
+                    <div class="col text-center px-0">
+                      <button class="tablinks" onclick="openCity(event, 'resume')">Resume</button>
+                    </div>
+                    <div class="col text-center px-0">
+                      <button class="tablinks" onclick="openCity(event, 'reputation')">Reputation</button>
+                  </div>
+                </div>
+                <div id="description" class="tabcontent" style="display: block;">
+                  <h3>Description</h3>
+                  <h4 class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut natus, minima eos earum sint quae ullam quisquam ab voluptatem nostrum aliquam officia pariatur, neque libero quis, expedita dolore dolorum fugit! Accusantium voluptates impedit enim, odio tempore exercitationem, illo reprehenderit doloribus blanditiis provident omnis nihil. Incidunt maxime necessitatibus optio voluptas laudantium, vero eos tenetur omnis quia nobis consequatur provident quasi aut fugiat assumenda, a aliquam voluptates ad veritatis labore molestias minima! Reprehenderit accusantium at, corrupti minus itaque, dolore qui nihil nulla quisquam vero, eveniet debitis amet quia assumenda pariatur necessitatibus facilis doloremque quibusdam ut repellat!</h4>
+                </div>
+                <div id="subjects" class="tabcontent">
+                  <h3>Sujects</h3>
+                  <div class="row">
+                    <div class="col-md-4 col-6">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="teaching_level">
+                            High School
+                          </h4>
+                        </div>
+                        <div class="col-6">
+                          <div class="icon">
+                            <i class="fa-solid fa-calculator"></i>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h4 class="subject_name">
+                            Math
+                          </h4>
+                          <h4 class="subject_name">
+                            Physics
+                          </h4>
+                          <h4 class="subject_name">
+                            Chemistry
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="teaching_level">
+                            College
+                          </h4>
+                        </div>
+                        <div class="col-6">
+                          <div class="icon">
+                            <i class="fa-solid fa-calculator"></i>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <h4 class="subject_name">
+                            Math
+                          </h4>
+                          <h4 class="subject_name">
+                            Science
+                          </h4>
+                          <h4 class="subject_name">
+                            Physics
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-6">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="teaching_level">
+                            University
+                          </h4>
+                        </div>
+                        <div class="col-6">
+                          <div class="icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                          </div>
+                        </div>
+                        <div class="col-6 subject_flex">
+                          <h4 class="subject_name subject_name_margin">
+                            <div class="d-flex">
+                              <span>
+                                Fisica
+                              </span>
+                              <span class="subject-name">
+                                1
+                              </span>
+                            </div>
+                          </h4>
+                          <h4 class="subject_name subject_name_margin">
+                            <div class="d-flex">
+                            <span>
+                              Analisi
+                            </span>
+                            <span class="subject-name">
+                              1
+                            </span>
+                            </div>
+                          </h4>
+                          <h4 class="subject_name subject_name_margin">
+                            <div class="d-flex">
+                              <span>
+                                Fisica
+                              </span>
+                              <span class="subject-name">
+                                1
+                              </span>
+                            </div>
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="reviews" class="tabcontent">
+                  <h3><b>Reviews</b></h3>
+                  <div class="reviews-wrapper">
+                    <div class="ratings-wrapper">
+                      <div class="top-left">
+                        <span class="total-rating">5</span>
+                        <div class="icons">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="total-reviews">52 reviews</span>
+                      </div>
+                      <div class="top-right">
+                        <div class="wrapper">
+                          <div class="five-stars">
+                            <div class="one">5 stars</div>
+                            <div class="two"></div>
+                            <div class="three">(51)</div>
+                          </div>
+                          <div class="other-stars">
+                            <div class="one">4 stars</div>
+                            <div class="two"></div>
+                            <div class="three">(0)</div>
+                          </div>
+                          <div class="other-stars">
+                            <div class="one">3 stars</div>
+                            <div class="two"></div>
+                            <div class="three">(0)</div>
+                          </div>
+                          <div class="other-stars">
+                            <div class="one">2 stars</div>
+                            <div class="two"></div>
+                            <div class="three">(0)</div>
+                          </div>
+                          <div class="other-stars">
+                            <div class="one">1 star</div>
+                            <div class="two"></div>
+                            <div class="three">(0)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="review-wrapper">
+                      <div class="review">
+                        <img src="./images/444.png" class="img-fluid" alt="">
+                        <div class="main">
+                          <div class="title">
+                            <div class="name-wrapper">
+                              <span class="name">Yana</span><i class="fa-solid fa-star"></i><span class="number">5</span>
+                            </div>
+                            <div class="date">
+                              <span>July 28, 2023</span>
+                            </div>
+                          </div>
+                          <div class="message">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi ratione quod error sit incidunt, laudantium rerum commodi facere ipsum?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="review">
+                        <img src="./images/444.png" class="img-fluid" alt="">
+                        <div class="main">
+                          <div class="title">
+                            <div class="name-wrapper">
+                              <span class="name">Yana</span><i class="fa-solid fa-star"></i><span class="number">5</span>
+                            </div>
+                            <div class="date">
+                              <span>July 28, 2023</span>
+                            </div>
+                          </div>
+                          <div class="message">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi ratione quod error sit incidunt, laudantium rerum commodi facere ipsum?
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="#" type="button">Show more reviews</a>
+                </div>
+                <div id="resume" class="tabcontent">
+                  <h3>Resume</h3>
+                  <div class="row">
+                    <div class="col-md-4 col-12">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="icon">
+                            <i class="fa-solid fa-school"></i>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <h4 class="subject_name">
+                            Engineer Graduate
+                          </h4>
+                          <h4 class="subject_name">
+                            <div class="verified">
+                              <i class="fa-solid fa-circle-check"></i>
+                              Verified
+                            </div> 
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-md-4 col-12 mt-3">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <h4 class="subject_name">
+                            High School Deploma
+                          </h4>
+                          <h4 class="subject_name">
+                            <div class="verified">
+                              <i class="fa-solid fa-circle-check"></i>
+                              Verified
+                            </div> 
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="reputation" class="tabcontent">
+                  <h3>Reputation</h3>
+                  <div class="reviews">
+                    <div><img src="./images/medal 1.png" class="img-fluid medal" alt=""><span>King tutor</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+  </div></section>
+  </main>
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+  <script src="./owl.carousel.min.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

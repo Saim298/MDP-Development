@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.css" />
+    <title>My Digital Prof</title>
+  </head>
+  <style>
+    body header {
+      background-color: transparent !important;
+    }
+    #findTutorPg header nav.bg {
+      box-shadow: none;
+      position: relative;
+    }
+  </style>
+
+  <body id="findTutorPg">
+    <header>  
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container px-0 mx-lg-5 mx-3">
+          <a class="navbar-brand" href="index.html">
+            <img src="./images/5.png" class="img-fluid" />
+          </a>
+        </div>
+      </nav>
+      <div class="container" id="pickTutor">
+        <h1 class="text-center">Pick your tutor</h1>
+        <div class="row justify-content-center tutor_container">
+          <div class="col-lg-3 col-8 col-md-4 col-4 pb-5 mb-4">
+            <div class="search_box">
+              <input type="text" class="placeholder_remove" placeholder="type subject or tutor's name" />
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <div class="header_left_main_area">
+              <div class="row study_level_section">
+                <div class="col-12 study_level_section_below">
+                  <label for="" class="text-black">Study level</label>
+                  <div class="select">
+                    <div class="custom-select">
+                      <select id="dropdown">
+                        <option value="school">School</option>
+                        <option value="college">College</option>
+                        <option value="university">University</option>
+                      </select>
+                      <div class="select-icon">
+                        <img id="icon" src="images/graduated.png" alt="Icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 study_level_section_below">
+                  <label for="" class="text-black">Subject</label>
+                  <div class="select">
+                    <div class="custom-select">
+                      <select id="dropdown">
+                        <option value="physics">Physics</option>
+                        <option value="math">Math</option>
+                        <option value="english">English</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="science">Science</option>
+                      </select>
+                      <div class="select-icon">
+                        <img id="icon" src="images/book-open.png" alt="Icon">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-5 filer-display ">
+                <div class="row" id="filter-icon">
+                  <div class="col-md-2">
+                    <img class="filter_icon" src="images/filter.png" alt="" />
+                  </div>
+                  <div class="col-md-10">
+                    <h1 class="filter_text">Filter by:</h1>
+                  </div>
+                </div>
+              <div class="mt-5 input-margin">
+                <input
+                  type="range"
+                  id="filterRange"
+                  min="0"
+                  max="100"
+                  step="1"
+                  value="0"
+                  class="input-range"
+                />
+                <div id="filterValue"></div>
+              </div>
+              <div class="mt-5 d-flex justify-content-center">
+                <div class="btn btn-primary search-button">Search</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-8 col-md-6 col-sm-6 col-12">
+            <div class="header_right_main_area">
+              <div class="tutor_area">
+                <div class="container pick_tutor_container">
+                  <a href="tutor.html" class="text-decoration-none">
+                    <div class="row single_tutor">
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-end">
+                        <div class="tutor_profile">
+                          <img
+                            src="./images/team-1.jpg"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-start border-end">
+                        <div class="last_active">
+                          <h4 class="online">online</h4>
+                        </div>
+                        <div class="tutor_name">
+                          <h3>Arif Waqas</h3>
+                        </div>
+                        <div class="tutor_status">
+                          <h5>
+                            Verified <i class="fa-solid fa-circle-check"></i>
+                          </h5>
+                        </div>
+                        <div class="tutor_badges">
+                          <div
+                            class="badge badge-primary"
+                            style="background-color: #4831d4"
+                          >
+                            Supertutor
+                          </div>
+                          <div
+                            class="badge badge-secondary"
+                            style="background-color: #007f4e"
+                          >
+                            Percorsi
+                          </div>
+                          <div
+                            class="badge badge-success"
+                            style="background-color: #ffb33e"
+                          >
+                            Verificato
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-4 col-6 border-start border-end">
+                        <div class="tutor_subjects">
+                          <h5>Subjects | Teach</h5>
+                          <div class="row">
+                            <div class="col">
+                              <div class="subject">Mathematics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Physics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Chemistry</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Biology</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tutor_rating_area d-flex">
+                          <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="tutor_rating">
+                            <h5>5/5</h5>
+                          </div>
+                          <div class="tutor_total_review">
+                            <h5>(17)</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6 border-start">
+                        <div class="tutor_video">
+                          <video
+                            src="./videos/video.mp4"
+                            controls
+                            autoplay
+                            muted
+                          ></video>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="container pick_tutor_container">
+                  <a href="tutor.html" class="text-decoration-none">
+                    <div class="row single_tutor">
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-end ">
+                        <div class="tutor_profile">
+                          <img
+                            src="./images/team-2.jpg"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-start border-end border_end_remove">
+                        <div class="last_active">
+                          <h4 class="online">online</h4>
+                        </div>
+                        <div class="tutor_name">
+                          <h3>Arif Waqas</h3>
+                        </div>
+                        <div class="tutor_status">
+                          <h5>
+                            Verified <i class="fa-solid fa-circle-check"></i>
+                          </h5>
+                        </div>
+                        <div class="tutor_badges">
+                          <div
+                            class="badge badge-primary"
+                            style="background-color: #4831d4"
+                          >
+                            Supertutor
+                          </div>
+                          <div
+                            class="badge badge-secondary"
+                            style="background-color: #007f4e"
+                          >
+                            Percorsi
+                          </div>
+                          <div
+                            class="badge badge-success"
+                            style="background-color: #ffb33e"
+                          >
+                            Verificato
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-4 col-6 border-start border-end">
+                        <div class="tutor_subjects">
+                          <h5>Subjects | Teach</h5>
+                          <div class="row">
+                            <div class="col">
+                              <div class="subject">Mathematics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Physics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Chemistry</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Biology</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tutor_rating_area d-flex">
+                          <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="tutor_rating">
+                            <h5>5/5</h5>
+                          </div>
+                          <div class="tutor_total_review">
+                            <h5>(17)</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6 border-start">
+                        <div class="tutor_video">
+                          <video
+                            src="./videos/video.mp4"
+                            controls
+                            autoplay
+                            muted
+                          ></video>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="container pick_tutor_container">
+                  <a href="tutor.html" class="text-decoration-none">
+                    <div class="row single_tutor">
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-end">
+                        <div class="tutor_profile">
+                          <img
+                            src="./images/team-3.jpg"
+                            class="img-fluid"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6
+                      border-start border-end">
+                        <div class="last_active">
+                          <h4 class="online">online</h4>
+                        </div>
+                        <div class="tutor_name">
+                          <h3>Arif Waqas</h3>
+                        </div>
+                        <div class="tutor_status">
+                          <h5>
+                            Verified <i class="fa-solid fa-circle-check"></i>
+                          </h5>
+                        </div>
+                        <div class="tutor_badges">
+                          <div
+                            class="badge badge-primary"
+                            style="background-color: #4831d4"
+                          >
+                            Supertutor
+                          </div>
+                          <div
+                            class="badge badge-secondary"
+                            style="background-color: #007f4e"
+                          >
+                            Percorsi
+                          </div>
+                          <div
+                            class="badge badge-success"
+                            style="background-color: #ffb33e"
+                          >
+                            Verificato
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-lg-3 col-md-4 col-6 border-start border-end">
+                        <div class="tutor_subjects">
+                          <h5>Subjects | Teach</h5>
+                          <div class="row">
+                            <div class="col">
+                              <div class="subject">Mathematics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Physics</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Chemistry</div>
+                            </div>
+                            <div class="col">
+                              <div class="subject">Biology</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tutor_rating_area d-flex">
+                          <div class="star">
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <div class="tutor_rating">
+                            <h5>5/5</h5>
+                          </div>
+                          <div class="tutor_total_review">
+                            <h5>(17)</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-6 border-start">
+                        <div class="tutor_video">
+                          <video
+                            src="./videos/video.mp4"
+                            controls
+                            autoplay
+                            muted
+                          ></video>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+
+
+    <script>
+      const filterRange = document.getElementById("filterRange");
+      const filterValue = document.getElementById("filterValue");
+
+      // Add an event listener to the seek bar to track its value changes
+      filterRange.addEventListener("input", updateFilterValue);
+
+      // Function to update the filter value and position it
+      function updateFilterValue() {
+        const value = filterRange.value;
+        filterValue.textContent = value;
+
+        // Calculate the position of the number based on the value
+        const percent =
+          ((value - filterRange.min) / (filterRange.max - filterRange.min)) *
+          100;
+        const newPosition = 8 + percent * 0.94; // Adjust 0.94 for positioning
+
+        // Set the position of the number below the seek bar
+        filterValue.style.left = `calc(${newPosition}% - 12px)`; // Adjust 12px for centering
+      }
+
+      // Initial update to display the default value
+      updateFilterValue();
+    </script>
+    <!-- Bootstrap Bundle with Popper -->
+    
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./owl.carousel.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
